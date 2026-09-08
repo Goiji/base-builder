@@ -7,3 +7,4 @@ broadcast/
 .env
 .DS_Store
 coverage/
+.gas-snapshot

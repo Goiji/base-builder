@@ -1,0 +1,14 @@
+name: Gas Diff
+
+on:
+  pull_request:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+      - run: forge snapshot
+      - name: Comment gas diff
+        run: echo "gas report generated in $GITHUB_WORKSPACE/.gas-snapshot"

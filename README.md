@@ -1,5 +1,8 @@
 # base-builder
 
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Solidity](https://img.shields.io/badge/solidity-%5E0.8.20-informational)
+
 Open toolkit for building and deploying EVM smart contracts on **Base**.
 
 Built in the open, one commit at a time.
@@ -19,10 +22,10 @@ Built in the open, one commit at a time.
 src/          Solidity contracts
 interfaces/   Shared Solidity interfaces
 libraries/    Internal math, address & crypto helpers
-lib/          Vendor libraries (forge install)
 test/         Foundry test suite
 script/       Deployment scripts
 tooling/      Off-chain helper tools
+docs/         Module documentation
 ```
 
 ## Getting started
@@ -33,7 +36,21 @@ forge build
 forge test
 ```
 
+## Modules
+
+- [Token templates](docs/tokens.md)
+- [Distribution](docs/distribution.md)
+- [Factory & registry](docs/factory.md)
+- [Governance & access](docs/governance.md)
+- [Market & treasury](docs/markets.md)
+- [Libraries](docs/libraries.md)
+- [Architecture](docs/architecture.md)
+
 ## Security
 
 See [SECURITY.md](SECURITY.md). Everything under `src/`, `libraries/` and
 `interfaces/` is unaudited reference material unless stated otherwise.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

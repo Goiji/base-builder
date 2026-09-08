@@ -8,12 +8,19 @@
     "build": "forge build",
     "test": "forge test -vvv",
     "fmt": "forge fmt",
-    "deploy:base": "forge script script/DeployBaseERC20.s.sol --rpc-url $BASE_RPC --broadcast"
+    "lint": "solhint \"src/**/*.sol\" \"libraries/**/*.sol\"",
+    "deploy:base": "forge script script/DeployBaseERC20.s.sol --rpc-url $BASE_RPC --broadcast",
+    "deploy:sepolia": "forge script script/DeployAirdrop.s.sol --rpc-url $BASE_SEPOLIA_RPC --broadcast",
+    "merkle": "node tooling/generate-merkle.mjs"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2"
   },
   "devDependencies": {
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "ethers": "^6.13.0",
+    "solhint": "^5.0.0",
+    "prettier": "^3.3.0",
+    "hardhat": "^2.22.0"
   }
 }
